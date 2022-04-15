@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Macintosh_Portable_Battery
+D Multiple-cell battery
+K batt voltage-source cell
+F ~
+$ENDCMP
+#
+#End Doc Library
