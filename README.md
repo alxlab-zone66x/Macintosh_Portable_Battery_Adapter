@@ -8,6 +8,8 @@ The spacer and PCB is sufficient and the cheapest way to use a 6V lead-acid batt
 
 There's also a cover that can be 3D printed to give the battery a complete case. Padding should be added to keep the battery from moving around inside the case.
 
+The case is a modified version of the [Macintosh Battery Enclosure 3D model](https://www.thingiverse.com/thing:5185715) done by Stephen Arsenault. Thanks!
+
 
 
 ## 3D Printing Notes
@@ -62,3 +64,11 @@ Join us in #skunkworks on [Discord](https://discord.gg/GKcvtgU7P9) to help make 
 [<img src="docs/discordbanner.png" alt="Discord Open Retro SCSI skunkworks" style="float: left;" />](https://discord.gg/GKcvtgU7P9)
 
 
+
+
+
+
+
+## Attribution
+
+Macintosh Portable Battery Enclosure (M5137) by [StephenLulz](https://www.thingiverse.com/StephenLulz) is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
