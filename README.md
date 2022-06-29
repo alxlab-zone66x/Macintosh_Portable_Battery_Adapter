@@ -10,6 +10,10 @@ There's also a cover that can be 3D printed to give the battery a complete case.
 
 The case is a modified version of the [Macintosh Battery Enclosure 3D model](https://www.thingiverse.com/thing:5185715) done by Stephen Arsenault. Thanks!
 
+### v1.1 Notes
+
+This revision moves the solder pad for the wire to provide clearance between the case and the wire.  Slots were added to the PCB for the case cover to slot into. This was done prevent the sides of the case being pushed in easily.
+
 
 
 ## 3D Printing Notes
@@ -26,6 +30,14 @@ This can be printed without supports. If you're using a FDM printer with a 0.4mm
 | 1        | Red stranded wire, 4 AWG, 20cm for positive terminal         |
 | 1        | Black stranded wire, 4 AWG, 20cm for negative terminal       |
 | 2        | 4.8mm female spade terminal, crimp type                      |
+
+
+
+## Manufacturing
+
+The release includes the manufacturing files for JLCPCB specifically. If you need to the gerber files, BOM or component pick & place in a different format then you would have to generate them yourself.
+
+The PCB thickness chosen should be 1.6mm.
 
 
 
