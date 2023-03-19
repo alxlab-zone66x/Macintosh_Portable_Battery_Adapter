@@ -28,6 +28,8 @@ I would like to modify the v1.2 case so it will protect and separate the superca
 
 Upload images of v1.2.
 
+Test on an Macintosh Portable backlight version (M5126).
+
 
 
 ## 3D Printing Notes
