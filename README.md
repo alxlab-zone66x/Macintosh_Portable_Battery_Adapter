@@ -12,7 +12,21 @@ The case is a modified version of the [Macintosh Battery Enclosure 3D model](htt
 
 ### v1.1 Notes
 
-This revision moves the solder pad for the wire to provide clearance between the case and the wire.  Slots were added to the PCB for the case cover to slot into. This was done prevent the sides of the case being pushed in easily.
+This version moves the solder pad for the wire to provide clearance between the case and the wire.  Slots were added to the PCB for the case cover to slot into. This was done prevent the sides of the case being pushed in easily.
+
+### v1.2 Notes
+
+This version adds supercapacitor support to the PCB. This will allow you to run you're Macintosh Portable with no lead-acid battery! The supercapacitors cover the brief power spikes during hard drive spin up and such that the battery normally handles, so the computer won't shut off when running off the adapter. Supercapacitors are not a substitute for a real lead-acid battery. You won't be able to run without the AC adapter connected. Another difference is that it takes a few minutes for the supercapacitors to charge up before you can use the computer. You can still use a lead-acid battery along with the supercapacitors if you want to.
+
+The supercapacitors need to be balanced since they are used in series. I give two options on the PCB. The best option is to use ALD810025 which is a purpose built supercapacitor balancing IC. The ALD810025 will prolong the life of the supercapacitors and has very low to no leakage. The cheaper alternative is to do passive balancing with resistors. Zener diodes can also be used but I haven't done the calculations to know what the appropriate rating should be. If you're interested in the different types of supercapacitor balancing here's a wonderful [PDF](docs/info/o671684v410 ANP090a_EN.pdf) by Würth Elecktronik that explains it all. 
+
+It's important to have a recapped Macintosh Portable AC adapter or another 7.5v adapter that actually produces 1.5A. If you haven't recapped your Macintosh Portable adapter and try to use super capacitors only then chances are it will output a lot less than 1.5A and the computer will just shut off when just running on supercapacitors.
+
+### TODO
+
+I would like to modify the v1.2 case so it will protect and separate the supercapacitors from the lead-acid battery if both are installed. 
+
+Upload images of v1.2.
 
 
 
@@ -24,12 +38,24 @@ This can be printed without supports. If you're using a FDM printer with a 0.4mm
 
 ## Bill of Materials
 
+### v1.0 and v1.1
+
 | Quantity | Product Number                                               |
 | :------- | ------------------------------------------------------------ |
 | 4        | 6-32 3/8" pan head screws. The same used for 3 1/2" hard drives. (Optional. Only need when using complete battery case) |
 | 1        | Red stranded wire, 4 AWG, 20cm for positive terminal         |
 | 1        | Black stranded wire, 4 AWG, 20cm for negative terminal       |
 | 2        | 4.8mm female spade terminal, crimp type                      |
+
+### v1.2
+
+All the same parts as v1.0 and v1.1 with the addition of the supercapacitor stuff. Use either the IC or the resistors but not both. You can use a supercapacitor with a different capacity, but if you use resistors for balancing, you'll probably need to recalculate the resistance value. Refer to this [PDF](docs/info/o671684v410 ANP090a_EN.pdf) by Würth Elecktronik to do the calculation.
+
+| Quantity | Description                                               | Designators | Product Number | Datasheet                                |
+| :------- | --------------------------------------------------------- | ----------- | -------------- | ---------------------------------------- |
+| 1        | Supercapacitor balancing IC.                              | U1          | ALD810025SCL   | [pdf](docs/datasheets/ALD810025.pdf)     |
+| 3        | 1/4W 9kOhm resistor (though-hole or 0805)                 | R1,R2,R3    |                |                                          |
+| 3        | 10F, 2.7V supercapacitor, 5mm lead spacing, 10mm diameter | C1,C2,C3    | TPL-10/10X30F  | [pdf](docs/datasheets/TPL-10_10X30F.pdf) |
 
 
 
@@ -43,7 +69,9 @@ The PCB thickness chosen should be 1.6mm.
 
 ## Pictures
 
-<img src="docs/macintosh_portable_battery_adapter_v1.0_stack_of_pcbs.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 PCB stack" /><img src="docs/macintosh_portable_battery_adapter_v1.0_soldered_wires.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 soldered wires" /><img src="docs/macintosh_portable_battery_adapter_v1.0_with_no_case.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 without a case" /><img src="docs/macintosh_portable_battery_adapter_v1.0_case_top.jpg" style="display: inline-block; width: 33%; margin-right: auto;" alt="Macintosh Portable Battery Adapter v1.0 case top" /><img src="docs/macintosh_portable_battery_adapter_v1.0_case_angled.jpg" style="display: inline-block; width: 33%; margin-right: auto;" alt="Macintosh Portable Battery Adapter v1.0 case angled" />
+<img src="docs/macintosh_portable_battery_adapter_v1.0_stack_of_pcbs.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 PCB stack" /><img src="docs/macintosh_portable_battery_adapter_v1.0_soldered_wires.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 soldered wires" /><img src="docs/macintosh_portable_battery_adapter_v1.0_with_no_case.jpg" style="display: inline-block; width: 33%;" alt="Macintosh Portable Battery Adapter v1.0 without a case" /><img src="docs/macintosh_portable_battery_adapter_v1.0_case_top.jpg" style="display: inline-block; width: 33%; margin-right: auto;" alt="Macintosh Portable Battery Adapter v1.0 case top" /><img src="docs/macintosh_portable_battery_adapter_v1.0_case_angled.jpg" style="display: inline-block; width: 33%; margin-right: auto;" alt="Macintosh Portable Battery Adapter v1.0 case angled" /><img src="docs/macintosh_portable_battery_adapter_v1.2_pcb.jpg" style="display: inline-block; width: 33%; margin-right: auto;" alt="Macintosh Portable Battery Adapter v1.2 pcb" />
+
+
 
 
 
